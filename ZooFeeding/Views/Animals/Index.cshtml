@@ -1,0 +1,94 @@
+﻿@model IEnumerable<ZooFeeding.Models.Animal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Animals In the Zoo</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") |
+    @Html.ActionLink("Foods", "ViewFoods")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Animal Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Dry Cat Food", "Index", new { sortOrder = ViewBag.Food1SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Fish", "Index", new { sortOrder = ViewBag.Food2SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Fruit", "Index", new { sortOrder = ViewBag.Food3SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Hay", "Index", new { sortOrder = ViewBag.Food4SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Insects", "Index", new { sortOrder = ViewBag.Food5SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Meat", "Index", new { sortOrder = ViewBag.Food6SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Monkey Chow", "Index", new { sortOrder = ViewBag.Food7SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Plants", "Index", new { sortOrder = ViewBag.Food8SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Rodents", "Index", new { sortOrder = ViewBag.Food9SortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Vegetables", "Index", new { sortOrder = ViewBag.Food10SortParm })
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnimalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DryCatFood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fruit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insects)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Meat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonkeyChow)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plants)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rodents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vegetables)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AnimalId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AnimalId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AnimalId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ZooFeeding.Models.Animal>
+
+@{
+    ViewBag.Title = "ViewFoods";
+}
+
+<h2>All Foods The Animals Eat</h2>
+<table class="table">
+    <tr>
+        <th>
+            Food
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.DryCatFood)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Fish)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Fruit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Hay)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Insects)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Meat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.MonkeyChow)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Plants)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Rodents)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Vegetables)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFoods")
+        </td>
+    </tr>
+</table>
